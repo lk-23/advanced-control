@@ -1,2 +1,39 @@
-# advanced-control
-A Python-based collection of projects exploring Model Predictive Control (MPC), distributed parameter systems (PDE control), as well as robust and optimal control.
+# Advanced Control Systems
+
+This repository provides a structured collection of **modeling, control, and optimization projects** for learning and applying modern control techniques in **Python**.  
+
+Each notebook or module includes:
+- Mathematical derivations  
+- Implementation using open-source tools  
+- Closed-loop simulations and visualizations  
+
+---
+
+## Tools & Libraries
+
+Core Python tools used throughout the repository:
+
+| Category | Libraries |
+|-----------|------------|
+| Control & Optimization | [`do-mpc`](https://www.do-mpc.com/), [`CasADi`](https://web.casadi.org/), [`python-control`](https://python-control.readthedocs.io/) |
+| Numerical Methods | `NumPy`, `SciPy`|
+| PDE & FEM | tbd |
+| Data & Visualization | `pandas`, `matplotlib`, `seaborn` |
+| Utilities | tbd |
+
+---
+
+## Example Projects
+
+### 1D Heat Rod — Distributed Parameter MPC
+- PDE-based temperature control  
+
+### Energy Hub — (Nonlinear) MPC
+- Control of room temperature, costs and emissions of a (smart) building
+- Implemented with **CasADi** symbolic framework
+
+### ⚡ Power System Control
+- tbd
+
+---
+
