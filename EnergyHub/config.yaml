@@ -1,0 +1,30 @@
+run:
+  horizon: 24
+  log_level: INFO
+
+components:
+  heat_pump:
+    type: simple        # simple | tespy | off
+    params:
+      offset: 2.5
+      alpha: 0.075
+  pv:
+    type: pvlib         # pvlib | openMeteo | off
+    params:
+      tilt_deg: 30
+      azimuth_deg: 0
+      location:
+        latitude: 40.0
+        longitude: -105.0
+  pid:
+    type: off          # on | off
+    params:
+      kp: 2.0
+      ki: 0.1
+      kd: 0.01
+
+mpc:
+  type: do-mpc      # do-mpc | casadi |off
+  params:
+    prediction_horizon: 6
+    control_horizon: 2
