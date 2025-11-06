@@ -32,8 +32,13 @@ Core Python tools used throughout the repository:
 - Control of room temperature, costs and emissions of a (smart) building
 - Implemented with **CasADi** symbolic framework
 
-### ⚡ Power System Control
+### Power System Control
+- Simulation and Control of a Transformer
 - tbd
+
+### Energy System Optimization
+- (Robust) Optimization of Electrical Power Systems
+- Optimization and Operation of a District Heating Network
 
 ---
 
