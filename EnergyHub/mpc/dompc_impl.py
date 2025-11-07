@@ -2,8 +2,8 @@ import numpy as np
 import sys
 from casadi import *
 import do_mpc
-from mpc.mpc_base import MPCBase
 from typing import Any, Dict
+from mpc.mpc_base import MPCBase
 
 class DoMPC(MPCBase):
     def __init__(self, model: do_mpc.model.Model):
