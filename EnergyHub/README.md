@@ -16,14 +16,19 @@ For the PV modules, a **fixed panel tilt of 30°** and a **panel azimuth of 0° 
 *Source: [Open-Meteo](https://open-meteo.com/)*
 
 
-As a possible extension, [**PVLib**](https://pvlib-python.readthedocs.io/en/stable/) can be used to refine the PV performance modeling, allowing for more accurate calculations of irradiance, module temperature, and electrical output.
-
 ---
 
 ## Model
 
 The **Energy Hub** model integrates photovoltaic generation, thermal storage, and energy conversion components.  
 It provides a simulation environment for testing control strategies, including **Model Predictive Control (MPC)** and **PID-based control**.
+
+---
+
+### Building
+
+The simulation of the building performance can be based on real-world data, synthetic data, or a dynamic building model.
+Here, [**TABULA**](https://webtool.building-typology.eu/#bm) is used solely for modeling the thermal behavior of the building envelope, while other components such as the heat pump, photovoltaic system, and thermal storage are modeled separately and coupled through their respective energy flows within the MPC framework.
 
 ---
 
@@ -36,8 +41,6 @@ $\text{COP} = 2.5 + 0.075\cdot T_\text{ambient}$
 
 This linear approximation ensures that the COP equals 2.5 at 0 °C and 4.0 at 20 °C, capturing the main efficiency trend of an air-source heat pump without requiring a detailed thermodynamic simulation.
 
----
-
 #### PID control
 As an additional feature, the **inlet temperature** computed by the MPC serves as a reference for a **PID controller** regulating the operation of a heat pump.  
 
@@ -48,6 +51,10 @@ This allows for a more realistic, physics-based interaction between the control 
 
 
 ---
+
+### PV
+
+As a possible extension, [**PVLib**](https://pvlib-python.readthedocs.io/en/stable/) can be used to refine the PV performance modeling, allowing for more accurate calculations of irradiance, module temperature, and electrical output.
 
 ## MPC
 
